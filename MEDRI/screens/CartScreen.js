@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
   headerContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     marginBottom: 25,
   },
   title: {
@@ -96,11 +96,13 @@ const styles = StyleSheet.create({
   icon: {
     width: 24,
     height: 24,
+    position: 'absolute',
+    right: 0,
   },
   icon2: {
     width: 100,
     height: 40,
-    alignContent: 'center',
+    alignSelf: 'center',
     resizeMode: 'contain',
   },
   text: {
