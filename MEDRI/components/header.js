@@ -1,14 +1,15 @@
 import React from 'react';
 import { View, Image, StyleSheet,TouchableOpacity } from 'react-native';
 
-const Header = ({navigation}) => {
+
+const Header = () => {
   return (
     <View style={styles.header}>
       <Image source={require('../assets/images/Menu(1).png')} style={styles.headerImage} />
       <Image source={require('../assets/images/Logo.png')} style={styles.headerImage2} />
       <View style={styles.header2}>
         <Image source={require('../assets/images/Search(4).png')} style={styles.headerImage} />
-        <TouchableOpacity onPress={() => navigation.navigate('CartScreen')}>
+        <TouchableOpacity>
             <Image source={require('../assets/images/shopping bag.png')} style={styles.headerImage} />
         </TouchableOpacity>
       </View>
@@ -27,7 +28,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#ccc',
     paddingHorizontal: 20,
-    marginTop: 10,
+    marginTop: 15,
     marginBottom: 10,
     borderRadius: 10,
   },

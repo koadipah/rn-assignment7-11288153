@@ -40,10 +40,10 @@ const CartScreen = ({ navigation }) => {
       <View style={styles.cartItemDetails}>
         <Text style={styles.cartItemTitle}>{item.title}</Text>
         <Text style={styles.cartItemPrice}>${item.price}</Text>
-        <Text style={styles.productDescription}>{item.category}</Text>
         <TouchableOpacity onPress={() => removeFromCart(item.id)} style={{ alignItems: 'flex-end' }}>
           <Image source={require('../assets/images/Close.png')} style={styles.removeImage} />
         </TouchableOpacity>
+        <Text style={styles.productDescription}>{item.category}</Text>
       </View>
     </View>
   );
@@ -137,17 +137,16 @@ const styles = StyleSheet.create({
   },
   cartItemContainer: {
     flexDirection: 'row',
-    marginBottom: 20,
+    marginBottom: 10,
   },
   cartItemImage: {
-    width: 150,
+    width: 180,
     height: 150,
-    borderRadius: 15,
     resizeMode: 'contain',
   },
   cartItemDetails: {
     flex: 1,
-    marginLeft: 5,
+    marginLeft: 10,
     justifyContent: 'center',
   },
   cartItemTitle: {
@@ -162,14 +161,14 @@ const styles = StyleSheet.create({
   removeImage: {
     width: 20,
     height: 20,
-    top: 30,
+    top: 20,
   },
   totalContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: 20,
-    marginBottom: 20, // Add margin to create space between total and FooterC
+    marginBottom: 20, 
   },
   totalText: {
     fontSize: 18,

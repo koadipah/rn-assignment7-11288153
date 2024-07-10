@@ -35,9 +35,9 @@ const ProductDetailScreen = ({ route, navigation }) => {
     <View style={styles.container}>
       <Header navigation={navigation}/>
       <FlatList
-        data={[product]} // Wrap product in an array
+        data={[product]} 
         renderItem={renderProduct}
-        keyExtractor={(item) => item.id.toString()} // Ensure each item has a unique key
+        keyExtractor={(item) => item.id.toString()}
         contentContainerStyle={styles.listContainer}
         style={styles.flatList}
       />
@@ -93,6 +93,7 @@ const styles = StyleSheet.create({
     marginTop: 7,
     width: 350,
     height: 350,
+    alignSelf: 'center',
     resizeMode: 'contain',
   },
   row: {
